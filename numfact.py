@@ -12,7 +12,7 @@ def getNumFactors(num):
             else:
                 count[f]=1
         if f > 2:
-            f+=2
+            f+=2 #incrementing by 2 because after 2 all prime numbers are odd
         else:
             f+=1
 
