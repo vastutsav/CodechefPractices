@@ -9,12 +9,20 @@ aOrdCnt = 0
 bOrdCnt = 0
 answer = 0
 for t in tipSortedByDiffAmt:
-    if t[0] >= t[1] and aOrdCnt < X:
-        aOrdCnt+=1
-        answer+=t[0]
-    elif t[1] >= t[0] and bOrdCnt < Y:
-        bOrdCnt+=1
-        answer+=t[1]
+    if t[0] >= t[1]:
+        if aOrdCnt < X:
+            aOrdCnt+=1
+            answer+=t[0]
+        else:
+            bOrdCnt+=1
+            answer+=t[1]    
+    elif t[1] >= t[0]:
+        if bOrdCnt < Y:
+            bOrdCnt+=1
+            answer+=t[1]
+        else:
+            aOrdCnt+=1
+            answer+=t[0]
     else:
         break
 
